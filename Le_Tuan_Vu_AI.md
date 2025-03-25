@@ -252,3 +252,89 @@ AI đã và đang thay đổi nhiều ngành công nghiệp:
     - Thiếu công cụ quản lý lớn: Không có hệ sinh thái đầy đủ như TensorFlow (TensorBoard, TFX) để giám sát và quản lý quy trình học máy.
     - Tài liệu chưa hoàn thiện ban đầu: Dù đã cải thiện, tài liệu vẫn không chi tiết bằng TensorFlow ở một số khía cạnh nâng cao.
     - Khó tối ưu cho thiết bị di động: Việc triển khai mô hình PyTorch trên thiết bị nhúng hoặc di động phức tạp hơn so với TensorFlow Lite.
+# III.Tìm hiểu về Notebook và nguồn dữ liệu
+## 1.Làm quen với Notebook
+## 2.Nguồn dữ liệu (Data Sources)
+a. Kaggle
+- Kaggle
+    - là một nền tảng trực tuyến nổi tiếng dành cho các nhà khoa học dữ liệu, kỹ sư học máy và những người đam mê trí tuệ nhân tạo (AI). Được thành lập vào năm 2010 và sau đó được Google mua lại vào năm 2017, Kaggle cung cấp một môi trường để người dùng tìm kiếm, chia sẻ và sử dụng các tập dữ liệu (dataset), tham gia các cuộc thi học máy, học hỏi qua các khóa học ngắn, và cộng tác với cộng đồng toàn cầu. Đây là một trong những cộng đồng khoa học dữ liệu lớn nhất thế giới, với hơn 5 triệu thành viên (tính đến thời điểm gần đây).
+    - Kaggle không chỉ là nơi cung cấp dữ liệu mà còn là một sân chơi để kiểm tra kỹ năng phân tích dữ liệu và học máy thông qua các cuộc thi (competitions) với giải thưởng hấp dẫn. Ngoài ra, Kaggle hỗ trợ môi trường lập trình trực tuyến qua Kaggle Notebooks (dựa trên Jupyter Notebook), tích hợp GPU miễn phí để huấn luyện mô hình
+- Các tính năng chính của Kaggle:
+    - Datasets: Kho dữ liệu miễn phí và đa dạng, người dùng có thể tải xuống hoặc tải lên dataset của riêng mình.
+    - Competitions: Các cuộc thi giải quyết vấn đề thực tế với phần thưởng tiền mặt hoặc danh tiếng.
+    - Notebooks: Công cụ lập trình trực tuyến để phân tích dữ liệu và xây dựng mô hình.
+    - Courses: Các khóa học miễn phí về khoa học dữ liệu, Python, SQL, v.v.
+    - Discussion: Diễn đàn để trao đổi ý tưởng và học hỏi từ cộng đồng.
+- Một số dataset phổ biến:
+    - Titanic - Machine Learning from Disaster:
+        - Mô tả: Bộ dữ liệu chứa thông tin về hành khách trên tàu Titanic (tuổi, giới tính, hạng vé, v.v.) và liệu họ có sống sót hay không. Đây là dataset kinh điển cho người mới bắt đầu học phân tích dữ liệu và học máy.
+        - Ứng dụng: Dự đoán khả năng sống sót (classification).
+    - House Prices - Advanced Regression Techniques:
+        - Mô tả: Dữ liệu về giá nhà ở Ames, Iowa, với hơn 79 biến mô tả các đặc điểm của ngôi nhà (diện tích, số phòng, năm xây dựng, v.v.).
+        - Ứng dụng: Dự đoán giá nhà (regression).
+    - MNIST Digit Recognizer:
+        - Mô tả: Bộ dữ liệu gồm 70.000 hình ảnh chữ số viết tay (0-9), mỗi hình ảnh là ma trận 28x28 pixel.
+        - Ứng dụng: Phân loại hình ảnh (image classification).
+    - Credit Card Fraud Detection:
+        - Mô tả: Bộ dữ liệu ẩn danh về giao dịch thẻ tín dụng, với mục tiêu phát hiện giao dịch gian lận (rất không cân bằng - imbalanced dataset).
+        - Ứng dụng: Phát hiện bất thường (anomaly detection).
+    - COVID-19 Open Research Dataset (CORD-19):
+        - Mô tả: Bộ sưu tập các bài báo khoa học liên quan đến COVID-19, bao gồm văn bản và siêu dữ liệu.
+        - Ứng dụng: Xử lý ngôn ngữ tự nhiên (NLP) và phân tích văn bản.
+b.Hugging Face
+- Hugging Face
+    - là một công ty và nền tảng mã nguồn mở tập trung vào xử lý ngôn ngữ tự nhiên (NLP), học máy (machine learning), và trí tuệ nhân tạo (AI). Được thành lập vào năm 2016 bởi Clément Delangue, Julien Chaumond, và Thomas Wolf, Hugging Face ban đầu là một chatbot AI, nhưng sau đó đã chuyển hướng thành một trung tâm phát triển và chia sẻ các công cụ AI, đặc biệt là thư viện Transformers. Hiện nay, nó được xem như "GitHub của AI" nhờ kho tài nguyên khổng lồ dành cho cộng đồng nghiên cứu và phát triển AI
+    - Hugging Face nổi tiếng với việc cung cấp các mô hình học sâu (deep learning models) được huấn luyện sẵn (pre-trained models), bộ dữ liệu, và các công cụ mã nguồn mở giúp đơn giản hóa việc xây dựng và triển khai các ứng dụng AI, đặc biệt trong lĩnh vực NLP.
+- Hugging Face cung cấp nhiều tài nguyên và công cụ quan trọng, bao gồm:
+    - Thư viện Transformers:
+        - Là sản phẩm nổi bật nhất của Hugging Face, một thư viện Python mã nguồn mở hỗ trợ hàng nghìn mô hình học sâu được huấn luyện sẵn (như BERT, GPT, T5, v.v.).   
+        - Ứng dụng: Phân loại văn bản, dịch máy, trả lời câu hỏi, tạo văn bản, v.v.
+        - Đặc điểm: Dễ sử dụng, tích hợp với PyTorch, TensorFlow, và JAX.
+    - Datasets:
+        - Kho lưu trữ các bộ dữ liệu công khai dành cho NLP và các tác vụ AI khác.
+        - Ví dụ: SQuAD (Stanford Question Answering Dataset), MNLI (Multi-Genre Natural Language Inference), GLUE, v.v.
+        - Công cụ đi kèm: Thư viện datasets để tải, xử lý và quản lý dữ liệu dễ dàng.
+    - Model Hub:
+        - Nơi lưu trữ hơn 100.000 mô hình AI được cộng đồng đóng góp, từ mô hình ngôn ngữ lớn (LLM) đến mô hình xử lý hình ảnh, âm thanh.
+        - Người dùng có thể tải về, tinh chỉnh (fine-tune), hoặc triển khai trực tiếp qua API.
+    - Spaces:
+        - Một nền tảng để tạo và chia sẻ ứng dụng AI tương tác (demos) dựa trên các mô hình của Hugging Face, sử dụng Gradio hoặc Streamlit.
+    - Tokenizers:
+        - Công cụ xử lý văn bản nhanh và hiệu quả, hỗ trợ tokenization cho các mô hình ngôn ngữ.
+    - Cộng đồng và tài liệu:
+        - Diễn đàn, tài liệu chi tiết, và các khóa học giúp người dùng từ mới bắt đầu đến chuyên gia dễ dàng tiếp cận công nghệ AI.
+# IV.Phân tích dữ liệu sơ bộ - Exploratory Data Analysis (EDA)
+## 1.Hiểu dữ liệu (Data Understanding)
+- là bước đầu tiên và quan trọng nhất trong EDA. Đây là giai đoạn bạn làm quen với tập dữ liệu, nắm bắt cấu trúc, nội dung và ý nghĩa của nó trước khi đi sâu vào phân tích. Mục tiêu là trả lời câu hỏi: "Dữ liệu của tôi trông như thế nào?"
+    - Thu thập thông tin cơ bản: Bạn bắt đầu bằng cách xem xét nguồn gốc dữ liệu (dữ liệu từ đâu, ai thu thập, mục đích ban đầu là gì), kích thước (số lượng hàng, cột), và định dạng (CSV, JSON, cơ sở dữ liệu, v.v.).
+    - Kiểm tra cấu trúc: Xác định các biến (cột) trong dữ liệu, bao gồm loại dữ liệu của chúng (số, văn bản, ngày tháng, phân loại, v.v.). Ví dụ, một cột "tuổi" là số nguyên, còn "giới tính" là phân loại (categorical).
+    - Xác định giá trị thiếu (missing values): Kiểm tra xem có dữ liệu nào bị thiếu không (NaN, null) và đánh giá mức độ ảnh hưởng. Ví dụ, nếu 30% giá trị trong cột "thu nhập" bị thiếu, điều này có thể ảnh hưởng lớn đến phân tích sau này.
+    - Nhận diện giá trị bất thường (outliers): Tìm các giá trị không hợp lý hoặc khác biệt lớn so với phần còn lại, như một người có "tuổi" là 200 trong tập dữ liệu về dân số.
+    - Hiểu ngữ cảnh: Liên kết dữ liệu với thực tế. Ví dụ, nếu bạn phân tích dữ liệu bán hàng, bạn cần biết các yếu tố như mùa vụ, chương trình khuyến mãi, hoặc xu hướng thị trường có thể ảnh hưởng đến số liệu.
+- Ví dụ thực tế: Giả sử bạn có tập dữ liệu về khách hàng của một cửa hàng. Bạn sẽ kiểm tra các cột như "ID khách hàng", "số tiền chi tiêu", "ngày mua hàng", và xem liệu có giá trị nào bất thường (như số tiền âm) hay không.
+## 2.Phân tích dữ liệu (Data Analysis)
+- Sau khi hiểu dữ liệu, bạn bắt đầu phân tích để khám phá các đặc điểm, xu hướng và mối quan hệ trong dữ liệu. Đây là giai đoạn "đào sâu" để tìm ra những gì dữ liệu đang cố gắng "nói".
+    - Thống kê mô tả (Descriptive Statistics): Tính toán các giá trị cơ bản như trung bình, trung vị, độ lệch chuẩn, giá trị nhỏ nhất/lớn nhất để hiểu phân bố dữ liệu. Ví dụ, trung bình chi tiêu của khách hàng là 500.000 VNĐ, nhưng độ lệch chuẩn lớn cho thấy sự biến động mạnh.
+    - Phân tích phân bố (Distribution Analysis): Xem dữ liệu phân bố như thế nào (chuẩn, lệch trái, lệch phải). Điều này giúp phát hiện xu hướng tự nhiên, như đa số khách hàng chi tiêu dưới 200.000 VNĐ nhưng có một số ít chi tiêu hàng triệu.
+    - Tìm mối quan hệ (Correlation Analysis): Kiểm tra xem các biến có liên quan đến nhau không. Ví dụ, "tuổi" và "số tiền chi tiêu" có tương quan dương (người lớn tuổi chi tiêu nhiều hơn) hay không? Công cụ phổ biến là ma trận tương quan (correlation matrix).
+    - Phân đoạn dữ liệu (Segmentation): Chia dữ liệu thành các nhóm để phân tích chi tiết hơn, như phân tích theo giới tính, khu vực, hoặc nhóm tuổi.
+    - Kiểm tra giả thuyết sơ bộ: Đặt câu hỏi và kiểm tra nhanh, ví dụ: "Liệu khách hàng nam có chi tiêu nhiều hơn nữ không?" bằng cách so sánh trung bình giữa hai nhóm.
+- Ví dụ thực tế: Trong dữ liệu bán hàng, bạn có thể thấy trung bình doanh thu tăng vào cuối tuần, hoặc khách hàng từ thành phố lớn chi tiêu nhiều hơn 20% so với vùng nông thôn.
+## 3.Trực quan hóa dữ liệu (Data Visualization)
+- là cách biến dữ liệu thành hình ảnh để dễ hiểu và truyền đạt thông tin hiệu quả hơn. Đây là bước kết nối giữa phân tích và giao tiếp.
+    - Biểu đồ cơ bản:
+        - Histogram: Hiển thị phân bố của một biến, như phân bố tuổi của khách hàng.
+        - Boxplot: Phát hiện giá trị bất thường và so sánh phân bố giữa các nhóm (ví dụ: chi tiêu của nam vs nữ).
+        - Scatter plot: Xem mối quan hệ giữa hai biến, như "tuổi" và "số tiền chi tiêu".
+    - Biểu đồ nâng cao:
+        -Heatmap: Hiển thị ma trận tương quan giữa các biến, giúp phát hiện mối liên hệ mạnh/yếu.
+        -Line chart: Theo dõi xu hướng theo thời gian, như doanh thu hàng tháng.
+        - Bar chart: So sánh giá trị giữa các nhóm, như doanh thu theo khu vực.
+    - Nguyên tắc thiết kế: Đảm bảo biểu đồ rõ ràng, không quá tải thông tin, sử dụng màu sắc hợp lý để làm nổi bật điểm chính.
+    - Công cụ phổ biến: Python (Matplotlib, Seaborn), R (ggplot2), hoặc các phần mềm như Tableau, Power BI
+- Ví dụ thực tế: Bạn vẽ một histogram và thấy 80% khách hàng dưới 35 tuổi, hoặc dùng heatmap để phát hiện "số lần mua hàng" có tương quan mạnh với "số tiền chi tiêu".
+## Tổng kết
+- EDA là quá trình khám phá dữ liệu một cách có hệ thống để hiểu rõ bản chất của nó, phát hiện các mẫu hình, mối quan hệ và bất thường, đồng thời trình bày kết quả một cách trực quan.
+    - Hiểu dữ liệu giúp bạn làm quen với "nguyên liệu thô".
+    - Phân tích dữ liệu đào sâu để tìm insight.
+    - Trực quan hóa dữ liệu biến insight thành câu chuyện dễ hiểu.
