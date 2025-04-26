@@ -162,9 +162,9 @@
 2. Precision
     - Là độ đo của bài toán phân loại mà đơn giản nhất, tính toán bằng cách lấy số dương tính thật chia cho tổng dương tính dự đoán .  
     $\text{Precision} = \frac{\text{TP}}{\text{TP}+\text{FP}}$
-    - Sử dụng khi dương ính giả quan trọng hơn âm tính giả
+    - Sử dụng khi dương tính giả quan trọng hơn âm tính giả
 3. Recall
-    - Là một metric quan trọng, tính toán bằng cách lấy số dương tính thật chia cho tổng các dương tính thực tế
+    - Là một metric quan trọng, tính toán bằng cách lấy số dương tính thật chia cho tổng các dương tính thực tế  
     $\text{Recall} = \frac{\text{TP}}{\text{TP}+\text{FN}}$
     - Sử dụng khi giá trị âm tính giả quan trọng hơn dương tính giả
 4. F1-score
