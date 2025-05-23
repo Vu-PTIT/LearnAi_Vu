@@ -20,7 +20,7 @@
 - Hiệu quả với dữ liệu có nhiễu.
 - Dễ dàng triển khai và song song hóa.
 
-###  b.Random Forest(Rừng ngẫu nhiên)
+### b.Random Forest(Rừng ngẫu nhiên)
 
 **Nguyên lý hoạt động:**
 
@@ -40,7 +40,7 @@
 
 ## 2. Boosting: AdaBoost và XGBoost
 
-###  a.AdaBoost (Adaptive Boosting)
+### a.AdaBoost (Adaptive Boosting)
 
 **Nguyên lý hoạt động:**
 
