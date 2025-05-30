@@ -1,12 +1,12 @@
-# Supervised và Unsupervised learning
-## I.Supervised Learning
-1. Định nghĩa
+# I. Supervised và Unsupervised learning
+## A.Supervised Learning
+### 1. Định nghĩa
   - Học có giám sát là một loại học máy trong đó một mô hình được đào tạo trên dữ liệu được dán nhãn, có nghĩa là mỗi đầu vào được ghép nối với đầu ra chính xác.
-2. Mục tiêu
+### 2. Mục tiêu
   - Mô hình học bằng cách so sánh dự đoán của nó với các câu trả lời thực tế được cung cấp trong dữ liệu đào tạo. 
   - Theo thời gian, nó tự điều chỉnh để giảm thiểu lỗi và cải thiện độ chính xác. Mục tiêu của việc học có giám sát là đưa ra dự đoán chính xác khi được cung cấp dữ liệu mới, không nhìn thấy. 
   - Ví dụ: nếu một mô hình được đào tạo để nhận ra các chữ số viết tay, nó sẽ sử dụng những gì nó đã học để xác định chính xác các số mới mà nó đã thấy trước đó.
-3. Hoạt động
+### 3. Hoạt động
    - Quá trình này hoạt động thông qua:
        - Training Data: Mô hình được cung cấp với bộ dữ liệu đào tạo bao gồm dữ liệu đầu vào (features) và dữ liệu đầu ra tương ứng (labels).
        - Learning Process: Thuật toán xử lý dữ liệu đào tạo, học các mối quan hệ giữa các features đầu vào và labels đầu ra. Điều này đạt được bằng cách điều chỉnh các tham số mô hình để giảm thiểu sự khác biệt giữa các dự đoán của nó và các nhãn thực tế.
@@ -20,7 +20,7 @@
      - Hyperparameter Tuning: Điều chỉnh cài đặt kiểm soát quá trình đào tạo (ví dụ: tốc độ học tập) bằng các kỹ thuật như grid và cross-validation
      - Final Model Selection and Testing: Huấn luyện lại trên bộ dữ liệu hoàn chỉnh bằng cách sử dụng các siêu dự án tốt nhất để kiểm tra hiệu suất của nó trên bộ thử nghiệm để đảm bảo sự sẵn sàng để triển khai.
      - Model Deployment: Triển khai mô hình được xác thực để đưa ra dự đoán về dữ liệu mới, không nhìn thấy.
-4. Phân biệt
+### 4. Phân biệt
    - Supervised learning có thể được áp dụng cho hai loại vấn đề chính:
      - Classification(Phân loại): các biến output là các biến phân loại(ví dụ:  email spam hay không, yes hay no)
      - Regression(Hồi quy): các biến outout là các biến liên tục(ví dụ: dự đoán giá nhà, giá cổ phiếu).  
@@ -32,19 +32,19 @@
 | Thuật toán phổ biến | Logistic Regression, Decision Tree, SVM, Random Forest | Random Forest	Linear Regression, Decision Tree Regression, SVR |
 | Đánh giá mô hình    | Accuracy, Precision, Recall, F1-score, ROC-AUC         | RMSE, MAE, R² Score                                            |
 
-## II.Unspuervised Learning
-1. Định nghĩa
+## B.Unspuervised Learning
+### 1. Định nghĩa
   - Học không giám sát là một loại học máy trong đó một mô hình được đào tạo trên liên quan đến dữ liệu không nhãn
-2. Mục tiêu
+### 2. Mục tiêu
   - Các thuật toán  được giao nhiệm vụ tìm kiếm các mẫu và mối quan hệ trong dữ liệu mà không có bất kỳ kiến ​​thức trước nào về ý nghĩa của dữ liệu. 
   - Các thuật toán  tìm thấy các mẫu và dữ liệu ẩn mà không có bất kỳ sự can thiệp nào của con người, tức là, chúng ta không cung cấp đầu ra cho mô hình của chúng ta. Mô hình đào tạo chỉ có các giá trị tham số đầu vào và tự mình phát hiện ra các nhóm hoặc mẫu
-3. Hoạt động
+### 3. Hoạt động
   - Mô hình học bằng cách phân tích dữ liệu không nhãn để xác định các mẫu và mối quan hệ. Dữ liệu không được dán nhãn với bất kỳ danh mục hoặc kết quả được xác định trước, vì vậy thuật toán phải tự mình tìm các mẫu và mối quan hệ này. 
   - Đây có thể là một nhiệm vụ đầy thách thức, nhưng nó cũng có thể rất bổ ích, vì nó có thể tiết lộ những hiểu biết sâu sắc về dữ liệu sẽ không rõ ràng từ một bộ dữ liệu được dán nhãn.
   - Đầu vào cho unsupervised learning models như sau: 
     - Unstructured data: có thể chứa dữ liệu noisy (meaningless), các giá trị bị thiếu hoặc dữ liệu không xác định
     - Unlabeled data: Dữ liệu chỉ chứa giá trị cho các tham số đầu vào, không có giá trị được nhắm mục tiêu (output). 
-4. Phấn biệt
+### 4. Phấn biệt
 - Có 3 loại thuật toán chính được sử dụng :
   - Clustering(Phân cụm)
   - Association Rule Learning(ARL)
@@ -58,7 +58,7 @@
 | Thuật toán  | Apriori, Eclat, FP-Growth.                                                            | K-Means, DBSCAN, Hierarchical Clustering.                                          | PCA (Principal Component Analysis), t-SNE (t-Distributed Stochastic Neighbor Embedding), Autoencoder. |
 | Mối quan hệ | Tập trung vào việc tìm kiếm mối quan hệ giữa các biến mà không cần phân nhóm dữ liệu. | Tập trung vào việc phân nhóm dữ liệu mà không tìm kiếm mối quan hệ giữa các biến.  | Tập trung vào việc giảm số chiều của dữ liệu để đơn giản hóa mô hình hoặc trực quan hóa dữ liệu.      |
 
-## III. So sánh Supervised Learning và Unsupervised Learning
+# II. So sánh Supervised Learning và Unsupervised Learning
 
 | Tiếu chí           | Supervised Learning                                                                                     | Unsupervised Learning                                                                                      |
 | ------------------ | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -69,8 +69,8 @@
 | Đánh giá           | Accuracy, Precision, Recall, F1-Score, MSE/MAE                                                          | , Davies–Bouldin, Calinski–Harabasz…​                                                                      |
 | Phụ thuộc vào nhãn | Rất cao: cần dữ liệu được gán nhãn để huấn luyện​                                                       | Thấp/Không: không yêu cầu nhãn, hoạt động trực tiếp trên dữ liệu thô​                                      |
 
-## IV. Các thuật toán
-1. Supervised Learning  
+# III. Các thuật toán
+### 1. Supervised Learning  
 - [Linear Regression (Hồi quy tuyến tính)](https://en.wikipedia.org/wiki/Linear_regression)
   - Mục tiêu: Xây dựng mô hình tuyến tính để dự đoán giá trị liên tục của biến phụ thuộc (VD: giá nhà, doanh thu) dựa trên một hoặc nhiều biến độc lập. Cụ thể, hồi quy tuyến tính ước lượng mối quan hệ tuyến tính giữa biến đáp ứng (phụ thuộc) và các biến giải thích (độc lập)​
   - Nguyên lý hoạt động: Mô hình giả sử hàm trung bình có điều kiện của biến đáp ứng là một hàm tuyến tính của biến giải thích. Các hệ số của mô hình được ước lượng (thường bằng phương pháp bình phương tối thiểu – OLS) sao cho tổng bình phương sai số giữa giá trị dự đoán và giá trị thực nhỏ nhất
@@ -83,7 +83,7 @@
   - Mục tiêu: Phân loại nhị phân (binary classification) – dự đoán xác suất một biến mục tiêu thuộc lớp 0 hoặc 1 (ví dụ: mắc bệnh hay không, email spam hay không). Logistic Regression mở rộng được cho phân loại đa lớp (multinomial) khi cần​
   - Nguyên lý hoạt động: Mô hình học một kết hợp tuyến tính từ biến đầu vào để ước lượng log-odds (log(p/(1-p))) của biến nhị phân, sau đó đưa qua hàm sigmoid (hàm logistic) để ra xác suất. Hay nói cách khác, đầu ra của hàm tuyến tính được biến đổi bởi hàm sigmoid để đảm bảo giá trị dự đoán nằm trong [0,1]​
   - Ứng dụng: Logistic Regression rất phổ biến trong bài toán phân loại nhị phân. Ví dụ: chẩn đoán y khoa (bệnh tật hay không), lọc thư rác, phân loại tín dụng (phê duyệt hay từ chối), dự đoán khả năng nhấp chuột vào quảng cáo (yes/no), các bài toán phân loại nhãn cơ bản trong marketing và tài chính
-2. Unsupervised Learning  
+### 2. Unsupervised Learning  
 - [K-Means](https://en.wikipedia.org/wiki/K-means_clustering)
   - Mục tiêu: Phân cụm dữ liệu thành k nhóm (clusters) sao cho các điểm trong cùng cụm gần nhau nhất về khoảng cách (thông thường là Euclid), và xa các cụm khác nhất. Mỗi nhóm được đặc trưng bởi một tâm cụm (centroid)​
   - Nguyên lý hoạt động: Thuật toán Lloyd (naïve k-means) khởi tạo k tâm cụm ngẫu nhiên, sau đó lặp lại hai bước: (1) Gán mỗi điểm dữ liệu cho cụm có tâm gần nó nhất; (2) Cập nhật tâm cụm mới bằng cách tính trung bình tọa độ các điểm được gán. Lặp lại đến khi không còn thay đổi (các cụm hội tụ) hoặc đạt tới số vòng lặp tối đa. Mục tiêu tối ưu là giảm tổng phương sai nội cụm (WCSS).

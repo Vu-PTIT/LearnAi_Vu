@@ -4,23 +4,23 @@
 - Machine learning có thể tự dự đoán hoặc đưa ra quyết định mà không cần được lập trình cụ thể.
 ## II.Tổng quan về Data Variable
 - Trong Machine Learning, dữ liệu được phân loại dựa trên đặc tính để phù hợp với các thuật toán. Các loại chính bao gồm Numerical (biến số), Categorical (biến phân loại), Ordinal (biến thứ tự), và Binary (biến nhị phân). Mỗi loại có đặc điểm riêng và cách xử lý khác nhau, đặc biệt khi chuẩn bị dữ liệu cho mô hình.
-1. Numerical Variables (Biến số)
+### 1. Numerical Variables (Biến số)
     - Là các biến có giá trị là số, dùng để biểu thị các lượng có thể đo lường hoặc tính toán. Chúng được chia thành:
         - Discrete (Rời rạc): Các giá trị là số nguyên, có thể đếm được, ví dụ: số lượng con cái trong một gia đình (0, 1, 2, ...).
         - Continuous (Liên tục): Các giá trị là số thực, có thể nhận bất kỳ giá trị nào trong một khoảng, ví dụ: chiều cao (1.65m, 1.75m), cân nặng (50kg, 60kg), hoặc nhiệt độ.
     - Ứng dụng trong Machine Learning: Numerical variables có thể được sử dụng trực tiếp trong hầu hết các thuật toán như hồi quy tuyến tính, cây quyết định, hoặc mạng nơron, vì chúng đã ở dạng số. Tuy nhiên, để đảm bảo các biến có cùng tỷ lệ và tránh ảnh hưởng đến hiệu suất mô hình, thường cần chuẩn hóa (scaling)
-2. Categorical Variables (Biến phân loại)
+### 2. Categorical Variables (Biến phân loại)
     - Định nghĩa: Categorical variables là các biến dữ liệu biểu thị các danh mục hoặc nhóm, không có giá trị số trực tiếp. Chúng được chia thành hai loại:
         - Nominal (Danh nghĩa): Các danh mục không có thứ tự, ví dụ: màu sắc (đỏ, xanh, vàng), giới tính (nam, nữ), hoặc loại xe (sedan, SUV, truck). Không có mối quan hệ toán học giữa các danh mục.
         - Ordinal (Thứ tự): Các danh mục có thứ tự ý nghĩa, ví dụ: trình độ học vấn (cấp 3, cử nhân, thạc sĩ), mức độ hài lòng (rất hài lòng, hài lòng, không hài lòng). Khoảng cách giữa các danh mục không nhất thiết phải đều.
     - Ứng dụng trong Machine Learning: Hầu hết các thuật toán Machine Learning, như hồi quy tuyến tính hoặc mạng nơron, không thể xử lý trực tiếp categorical variables (trừ một số như Decision Tree). Do đó, cần mã hóa chúng thành dạng số.
-3. Ordinal Variables (Biến thứ tự)
+### 3. Ordinal Variables (Biến thứ tự)
     - Định nghĩa: Ordinal variables là một loại của categorical variables, nhưng có thứ tự ý nghĩa giữa các danh mục. Tuy nhiên, khoảng cách giữa các danh mục không nhất thiết phải đều nhau. Ví dụ:
         - Trình độ học vấn: cấp 3 < cử nhân < thạc sĩ < tiến sĩ.
         - Xếp hạng: hạng nhất > hạng nhì > hạng ba.
         - Mức độ hài lòng: rất hài lòng > hài lòng > không hài lòng.
     - Ứng dụng trong Machine Learning: Khi mã hóa ordinal variables, cần đảm bảo giữ nguyên thứ tự để mô hình hiểu đúng mối quan hệ. Phương pháp phổ biến là Ordinal Encoding, gán các giá trị số tự nhiên theo thứ tự (ví dụ: hạng nhất = 0, hạng nhì = 1, hạng ba = 2). Tuy nhiên, cần cẩn thận vì một số thuật toán, như hồi quy tuyến tính, có thể hiểu sai khoảng cách giữa các giá trị, coi chúng là đều (interval scale). Trong trường hợp này, có thể cần sử dụng các mô hình không nhạy cảm với khoảng cách, như Decision Tree.
-4. Binary Variables (Biến nhị phân)
+### 4. Binary Variables (Biến nhị phân)
     - Định nghĩa: Binary variables là một loại đặc biệt của categorical variables, chỉ có hai giá trị. Chúng thường được biểu thị bằng 0 và 1, hoặc các giá trị tương đương như có/không, đúng/sai, nam/nữ. Ví dụ:
         - Giới tính: nam (0), nữ (1).
         - Có/không: có (1), không (0).
